@@ -1,0 +1,320 @@
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDestinations (20210411025112)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "destinations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "city" varchar, "country" varchar, "date" varchar, "activities" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210411025112"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-11 02:51:36.239291"], ["updated_at", "2021-04-11 02:51:36.239291"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (1.2ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Germany"], ["date", "Summer 2014"], ["activities", "Tresor, zoo"], ["created_at", "2021-04-11 02:57:14.351557"], ["updated_at", "2021-04-11 02:57:14.351557"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (1.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Bungoma"], ["country", "Kenya"], ["date", "July-Aug 2017"], ["activities", "Clubs, safari"], ["created_at", "2021-04-11 02:57:14.359861"], ["updated_at", "2021-04-11 02:57:14.359861"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (2.0ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Los Angeles"], ["country", "USA"], ["date", "November 2018"], ["activities", "Skating, Camp Flog gnaw, hiking"], ["created_at", "2021-04-11 02:57:14.375065"], ["updated_at", "2021-04-11 02:57:14.375065"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (0.7ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Budapest"], ["country", "Hungary"], ["date", "September 2019"], ["activities", ""], ["created_at", "2021-04-11 02:57:14.381616"], ["updated_at", "2021-04-11 02:57:14.381616"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2021-04-10 22:06:04 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.7ms | Allocations: 478)
+Completed 200 OK in 50ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 4123)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-10 22:06:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-04-11 15:54:30 -0500
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.1ms | Allocations: 315)
+Completed 200 OK in 50ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 2443)
+
+
+Started GET "/des" for ::1 at 2021-04-11 15:54:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/des"):
+  
+Started GET "/destination" for ::1 at 2021-04-11 15:54:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destination" for ::1 at 2021-04-11 15:57:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destinations" for ::1 at 2021-04-11 15:57:45 -0500
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 6936)
+
+
+Started GET "/destination" for ::1 at 2021-04-11 15:58:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destination" for ::1 at 2021-04-11 15:58:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destination" for ::1 at 2021-04-11 15:58:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destination/1" for ::1 at 2021-04-11 15:58:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination/1"):
+  
+Started GET "/destination/1" for ::1 at 2021-04-11 15:59:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination/1"):
+  
+Started GET "/destination/1" for ::1 at 2021-04-11 15:59:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination/1"):
+  
+Started GET "/destination/1" for ::1 at 2021-04-11 16:01:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination/1"):
+  
+Started GET "/destination/" for ::1 at 2021-04-11 16:01:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destination" for ::1 at 2021-04-11 16:01:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destinations" for ::1 at 2021-04-11 16:01:14 -0500
+Processing by DestinationsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.4ms | Allocations: 5840)
+
+
+Started GET "/destination" for ::1 at 2021-04-11 16:01:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination"):
+  
+Started GET "/destination/1" for ::1 at 2021-04-11 16:01:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/destination/1"):
+  
+Started GET "/adddestination" for ::1 at 2021-04-11 16:01:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/adddestination"):
+  
+Started GET "/" for ::1 at 2021-04-11 16:04:41 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.3ms | Allocations: 191)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 824)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:04:43 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 227)
+
+
+Started GET "/destinations" for ::1 at 2021-04-11 16:04:47 -0500
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 1177)
+
+
+Started GET "/destinations" for ::1 at 2021-04-11 16:05:38 -0500
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.5ms | Allocations: 1175)
+
+
+Started GET "/destinations" for ::1 at 2021-04-11 16:08:20 -0500
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1161)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:08:25 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:09:10 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 225)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:09:12 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 225)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:09:16 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 225)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:11:40 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 225)
+
+
+Started GET "/destinations" for ::1 at 2021-04-11 16:11:43 -0500
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/destinations" for ::1 at 2021-04-11 16:14:49 -0500
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1175)
+
+
+Started GET "/destinations" for ::1 at 2021-04-11 16:14:50 -0500
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 1161)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:21:58 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 374)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:22:18 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:22:26 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:22:43 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:23:34 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:27:58 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.2ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:28:03 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 4.2ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:28:52 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:28:58 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 3.1ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:30:39 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.8ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:30:41 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:31:16 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 2.3ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 16:32:12 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2021-04-11 21:50:51 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jss/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 23.3ms | Allocations: 315)
+Completed 200 OK in 76ms (Views: 47.5ms | ActiveRecord: 0.0ms | Allocations: 2485)
+
+
