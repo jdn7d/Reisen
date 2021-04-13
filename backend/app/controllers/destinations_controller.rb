@@ -23,13 +23,13 @@ class DestinationsController < ApplicationController
 
     def destroy
         @destination = Destination.find_by_id(params[:id])
-        
+        @destination.destroy
     end
 
     private
 
     def to_params
-        params.require(:destination).permit(:city, :country, :date, :activities)
-      end
+        params.require(:destination).permit(:id, :city, :country, :date, :activities)
+    end
     
 end
