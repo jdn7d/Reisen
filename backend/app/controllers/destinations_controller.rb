@@ -12,10 +12,24 @@ class DestinationsController < ApplicationController
 
     def create
 
+        @destination = Destination.create(
+            city: to_params[:city], 
+            country: to_params[:country],
+            date: to_params[:date],
+            activities: to_params[:activities]
+          )
+        render json:  @destination
     end
 
     def destroy
-
+        @destination = Destination.find_by_id(params[:id])
+        
     end
+
+    private
+
+    def to_params
+        params.require(:destination).permit(:city, :country, :date, :activities)
+      end
     
 end

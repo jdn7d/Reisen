@@ -883,3 +883,477 @@ Processing by DestinationsController#index as */*
 Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.6ms | Allocations: 1165)
 
 
+Started GET "/destinations" for ::1 at 2021-04-12 20:28:41 -0500
+Processing by DestinationsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 1.2ms | Allocations: 1765)
+
+
+Started POST "/destinations" for ::1 at 2021-04-12 20:42:49 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"lk", "country"=>"lk", "date"=>"j;lk", "activities"=>"j;lk", "destination"=>{"city"=>"lk", "country"=>"lk", "date"=>"j;lk", "activities"=>"j;lk"}}
+Completed 204 No Content in 4ms (Allocations: 30)
+
+
+Started POST "/destinations" for ::1 at 2021-04-12 20:45:06 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"lkj", "country"=>"lkj", "date"=>";lkj", "activities"=>";lkj", "destination"=>{"city"=>"lkj", "country"=>"lkj", "date"=>";lkj", "activities"=>";lkj"}}
+Completed 204 No Content in 0ms (Allocations: 25)
+
+
+Started POST "/destinations" for ::1 at 2021-04-12 20:45:29 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"lkjh", "country"=>"lkjh", "date"=>"lkjh", "activities"=>"kljh]", "destination"=>{"city"=>"lkjh", "country"=>"lkjh", "date"=>"lkjh", "activities"=>"kljh]"}}
+Completed 204 No Content in 0ms (Allocations: 25)
+
+
+Started POST "/destinations" for ::1 at 2021-04-12 20:49:16 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"lkj", "country"=>"lkj", "date"=>"k;lj", "activities"=>"lk;", "destination"=>{"city"=>"lkj", "country"=>"lkj", "date"=>"k;lj", "activities"=>"lk;"}}
+Completed 204 No Content in 0ms (Allocations: 25)
+
+
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" ORDER BY "destinations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/destinations" for ::1 at 2021-04-12 20:57:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"k;j", "country"=>";lkjl;", "date"=>"kj;lk", "activities"=>"j;lkj", "destination"=>{"city"=>"k;j", "country"=>";lkjl;", "date"=>"kj;lk", "activities"=>"j;lkj"}}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms | Allocations: 1526)
+
+
+  
+NameError (undefined local variable or method `destintation_params' for #<DestinationsController:0x007f3efd3d0c28>
+Did you mean?  destination_path):
+  
+app/controllers/destinations_controller.rb:14:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:01:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"l;k", "country"=>"jl;kj", "date"=>"lkj", "activities"=>";lkj", "destination"=>{"city"=>"l;k", "country"=>"jl;kj", "date"=>"lkj", "activities"=>";lkj"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.9ms | Allocations: 1562)
+
+
+  
+NameError (undefined local variable or method `destination' for #<DestinationsController:0x007f3efc0be338>
+Did you mean?  destination_url):
+  
+app/controllers/destinations_controller.rb:14:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:27:21 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"lkj", "country"=>"LKJOU", "date"=>"OIU", "activities"=>"n,mlk", "destination"=>{"city"=>"lkj", "country"=>"LKJOU", "date"=>"OIU", "activities"=>"n,mlk"}}
+Completed 500 Internal Server Error in 8ms (Allocations: 1547)
+
+
+  
+NameError (undefined local variable or method `destination' for #<DestinationsController:0x007f3efd39ae20>
+Did you mean?  destination_url):
+  
+app/controllers/destinations_controller.rb:14:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:27:53 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"", "country"=>"", "date"=>"OIU", "activities"=>"llkj;lk", "dates"=>"", "destination"=>{"city"=>"", "country"=>"", "date"=>"OIU", "activities"=>"llkj;lk"}}
+Completed 500 Internal Server Error in 8ms (Allocations: 1547)
+
+
+  
+NameError (undefined local variable or method `destination' for #<DestinationsController:0x007f3efd81b5f8>
+Did you mean?  destination_url):
+  
+app/controllers/destinations_controller.rb:14:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:28:47 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"", "country"=>"", "date"=>"OIU", "activities"=>"jkhk", "dates"=>"", "destination"=>{"city"=>"", "country"=>"", "date"=>"OIU", "activities"=>"jkhk"}}
+Completed 500 Internal Server Error in 5ms (Allocations: 1547)
+
+
+  
+NameError (undefined local variable or method `destination' for #<DestinationsController:0x007fffe1e596b8>
+Did you mean?  destination_url):
+  
+app/controllers/destinations_controller.rb:14:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:33:17 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"l", "country"=>"';lk", "date"=>"';kl';", "activities"=>"kl;", "destination"=>{"city"=>"l", "country"=>"';lk", "date"=>"';kl';", "activities"=>"kl;"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms | Allocations: 1477)
+
+
+  
+NameError (undefined local variable or method `post_params' for #<DestinationsController:0x007f3efc3a0e20>
+Did you mean?  to_param):
+  
+app/controllers/destinations_controller.rb:15:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:35:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"lkj", "country"=>"lkj;l", "date"=>"kj;lkj;l", "activities"=>"kj", "destination"=>{"city"=>"lkj", "country"=>"lkj;l", "date"=>"kj;lkj;l", "activities"=>"kj"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.1ms | Allocations: 1517)
+
+
+  
+NameError (undefined local variable or method `to_params' for #<DestinationsController:0x007fffe21097f0>
+Did you mean?  to_param
+               params):
+  
+app/controllers/destinations_controller.rb:15:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:40:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"'kljk;lkj", "country"=>"lkj", "date"=>"lkj", "activities"=>";lkj", "destination"=>{"city"=>"'kljk;lkj", "country"=>"lkj", "date"=>"lkj", "activities"=>";lkj"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.5ms | Allocations: 1513)
+
+
+  
+NameError (undefined local variable or method `destinations_params' for #<DestinationsController:0x007f3efd77dc40>
+Did you mean?  destinations_path
+               destinations_url
+               destination_path):
+  
+app/controllers/destinations_controller.rb:14:in `create'
+Started POST "/destinations" for ::1 at 2021-04-12 21:42:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"l;k", "country"=>"jl;k", "date"=>"j;lk", "activities"=>"jlkj", "destination"=>{"city"=>"l;k", "country"=>"jl;k", "date"=>"j;lk", "activities"=>"jlkj"}}
+Started POST "/destinations" for ::1 at 2021-04-12 21:43:18 -0500
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mDestination Create (6.5ms)[0m  [1m[32mINSERT INTO "destinations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2021-04-13 02:44:47.417587"], ["updated_at", "2021-04-13 02:44:47.417587"]]
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mDestination Create (6.4ms)[0m  [1m[32mINSERT INTO "destinations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2021-04-13 02:45:05.145592"], ["updated_at", "2021-04-13 02:45:05.145592"]]
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 45642342ms (ActiveRecord: 23.9ms | Allocations: 676678)
+
+
+  
+Errno::EIO (Input/output error - read):
+  
+app/controllers/destinations_controller.rb:15:in `create'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"", "country"=>"", "date"=>"j;lk", "activities"=>"", "dates"=>"", "destination"=>{"city"=>"", "country"=>"", "date"=>"j;lk", "activities"=>""}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 10.1ms | Allocations: 24327)
+
+
+  
+Errno::EIO (Input/output error @ io_write - <STDERR>):
+  
+app/controllers/destinations_controller.rb:15:in `create'
+Started GET "/destinations" for ::1 at 2021-04-13 10:24:21 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 63ms (Views: 15.5ms | ActiveRecord: 2.9ms | Allocations: 8321)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:24:25 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"';k", "country"=>";lk", "date"=>"';k", "activities"=>"';lk", "destination"=>{"city"=>"';k", "country"=>";lk", "date"=>"';k", "activities"=>"';lk"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 411)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'county' for Destination.):
+  
+app/controllers/destinations_controller.rb:15:in `create'
+Started POST "/destinations" for ::1 at 2021-04-13 10:24:35 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>";lk", "country"=>";lk", "date"=>"';kl", "activities"=>";lk", "dates"=>"", "destination"=>{"city"=>";lk", "country"=>";lk", "date"=>"';kl", "activities"=>";lk"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (2.8ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", ";lk"], ["country", ";lk"], ["date", "';kl"], ["activities", ";lk"], ["created_at", "2021-04-13 15:24:35.872866"], ["updated_at", "2021-04-13 15:24:35.872866"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 38ms (Views: 1.2ms | ActiveRecord: 10.4ms | Allocations: 6954)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:24:40 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 1596)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:24:58 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (1.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 1.4ms | Allocations: 1563)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:25:37 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 1544)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:27:32 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 1553)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:27:36 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>";l", "country"=>"l;k", "date"=>"jl;k", "activities"=>"jlk", "destination"=>{"city"=>";l", "country"=>"l;k", "date"=>"jl;k", "activities"=>"jlk"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (6.8ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", ";l"], ["country", "l;k"], ["date", "jl;k"], ["activities", "jlk"], ["created_at", "2021-04-13 15:27:36.666971"], ["updated_at", "2021-04-13 15:27:36.666971"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 27ms (Views: 0.6ms | ActiveRecord: 11.2ms | Allocations: 3975)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:27:38 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 1689)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:27:41 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"", "country"=>"l", "date"=>"l", "activities"=>"l", "destination"=>{"city"=>"", "country"=>"l", "date"=>"l", "activities"=>"l"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (6.8ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", ""], ["country", "l"], ["date", "l"], ["activities", "l"], ["created_at", "2021-04-13 15:27:41.897420"], ["updated_at", "2021-04-13 15:27:41.897420"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 10.1ms | Allocations: 3600)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:27:43 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.6ms | Allocations: 1834)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:28:16 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.8ms | Allocations: 1834)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:29:08 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"goppy gop", "country"=>"ippypokli", "date"=>"tuesday", "activities"=>"leg surgery", "destination"=>{"city"=>"goppy gop", "country"=>"ippypokli", "date"=>"tuesday", "activities"=>"leg surgery"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (4.8ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "goppy gop"], ["country", "ippypokli"], ["date", "tuesday"], ["activities", "leg surgery"], ["created_at", "2021-04-13 15:29:08.264233"], ["updated_at", "2021-04-13 15:29:08.264233"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 11.0ms | Allocations: 3599)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:29:13 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 1979)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:30:13 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"", "country"=>"", "date"=>"", "activities"=>"", "undefined"=>"k", "destination"=>{"city"=>"", "country"=>"", "date"=>"", "activities"=>""}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (2.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", ""], ["country", ""], ["date", ""], ["activities", ""], ["created_at", "2021-04-13 15:30:13.145652"], ["updated_at", "2021-04-13 15:30:13.145652"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 4010)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:31:01 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"lkj", "country"=>"lkj", "date"=>"lkj", "activities"=>"lkj", "destination"=>{"city"=>"lkj", "country"=>"lkj", "date"=>"lkj", "activities"=>"lkj"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (6.6ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "lkj"], ["country", "lkj"], ["date", "lkj"], ["activities", "lkj"], ["created_at", "2021-04-13 15:31:01.734067"], ["updated_at", "2021-04-13 15:31:01.734067"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 25ms (Views: 0.6ms | ActiveRecord: 11.5ms | Allocations: 3980)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:31:03 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (1.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 1.1ms | Allocations: 2270)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:31:56 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"l1lkj1lkj1", "country"=>"lkj", "date"=>"lkj", "activities"=>"lk", "destination"=>{"city"=>"l1lkj1lkj1", "country"=>"lkj", "date"=>"lkj", "activities"=>"lk"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (2.3ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "l1lkj1lkj1"], ["country", "lkj"], ["date", "lkj"], ["activities", "lk"], ["created_at", "2021-04-13 15:31:56.190934"], ["updated_at", "2021-04-13 15:31:56.190934"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 6.1ms | Allocations: 3560)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:31:58 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 2414)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 10:32:05 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"hi", "country"=>"hi", "date"=>"hi", "activities"=>"ih", "destination"=>{"city"=>"hi", "country"=>"hi", "date"=>"hi", "activities"=>"ih"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (7.0ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "hi"], ["country", "hi"], ["date", "hi"], ["activities", "ih"], ["created_at", "2021-04-13 15:32:05.280838"], ["updated_at", "2021-04-13 15:32:05.280838"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 11.3ms | Allocations: 3603)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:32:06 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 2559)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:34:45 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2561)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:35:03 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 2559)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:39:25 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (1.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 1.4ms | Allocations: 2559)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (5.7ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (1.7ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (1.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (3.1ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (2.9ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (1.4ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (3.6ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (2.7ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 8]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (1.8ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 9]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (2.4ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 10]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (1.5ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 11]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (3.6ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 12]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (3.1ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 13]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Destroy (2.1ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 14]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (4.3ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Germany"], ["date", "Summer 2014"], ["activities", "Tresor, zoo"], ["created_at", "2021-04-13 15:39:43.774266"], ["updated_at", "2021-04-13 15:39:43.774266"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (4.0ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Bungoma"], ["country", "Kenya"], ["date", "July-Aug 2017"], ["activities", "Clubs, safari"], ["created_at", "2021-04-13 15:39:43.794201"], ["updated_at", "2021-04-13 15:39:43.794201"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (3.7ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Los Angeles"], ["country", "USA"], ["date", "November 2018"], ["activities", "Skating, Camp Flog gnaw, hiking"], ["created_at", "2021-04-13 15:39:43.810403"], ["updated_at", "2021-04-13 15:39:43.810403"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDestination Create (3.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Budapest"], ["country", "Hungary"], ["date", "September 2019"], ["activities", ""], ["created_at", "2021-04-13 15:39:43.825468"], ["updated_at", "2021-04-13 15:39:43.825468"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/destinations" for ::1 at 2021-04-13 10:39:48 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 1166)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:39:52 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (1.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.0ms | Allocations: 1165)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:39:55 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (1.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 1165)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:43:34 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 1165)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 10:43:56 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 1165)
+
+
