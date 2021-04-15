@@ -3045,3 +3045,138 @@ Processing by DestinationsController#index as */*
 Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 872)
 
 
+Started GET "/destinations" for ::1 at 2021-04-13 19:53:17 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 43ms (Views: 22.0ms | ActiveRecord: 2.7ms | Allocations: 7792)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 19:53:40 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 890)
+
+
+Started POST "/destinations" for ::1 at 2021-04-13 19:54:00 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"St. Louis", "country"=>"USA", "date"=>"now", "activities"=>"racquetball", "destination"=>{"city"=>"St. Louis", "country"=>"USA", "date"=>"now", "activities"=>"racquetball"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (8.0ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "St. Louis"], ["country", "USA"], ["date", "now"], ["activities", "racquetball"], ["created_at", "2021-04-14 00:54:00.977374"], ["updated_at", "2021-04-14 00:54:00.977374"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 58ms (Views: 0.8ms | ActiveRecord: 12.7ms | Allocations: 4215)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 19:54:02 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/destinations" for ::1 at 2021-04-13 19:54:08 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started DELETE "/destinations/37" for ::1 at 2021-04-13 19:54:10 -0500
+Processing by DestinationsController#destroy as JSON
+  Parameters: {"id"=>"37", "destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:26:in `destroy'
+  [1m[36mDestination Destroy (7.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 37]]
+  ↳ app/controllers/destinations_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:26:in `destroy'
+Completed 204 No Content in 56ms (ActiveRecord: 12.9ms | Allocations: 5126)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 20:58:02 -0500
+Processing by DestinationsController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+  [1m[36mDestination Load (1.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 53ms (Views: 44.5ms | ActiveRecord: 2.1ms | Allocations: 5090)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 20:59:29 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.8ms | Allocations: 874)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:00:07 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.6ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:00:09 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.6ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:00:34 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.8ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:01:16 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 1.2ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:01:21 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:01:27 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:01:30 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:01:34 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.7ms | Allocations: 872)
+
+
+Started GET "/destinations" for ::1 at 2021-04-14 21:01:36 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.5ms | Allocations: 872)
+
+
