@@ -1,0 +1,47 @@
+[33mcommit 2e2592a81b867ac74b868ba681ec173cd9bef783[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Thu Apr 15 09:56:14 2021 -0500
+
+    frontend
+
+[33mcommit 1e061e5d8424e097fe8cd16e969cb5f0b25e10cf[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Wed Apr 14 21:07:30 2021 -0500
+
+    added footer component with qoute
+
+[33mcommit b30e7ce34945898e453c9c0a4d1d22d29d00019b[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Tue Apr 13 13:32:31 2021 -0500
+
+    completed crd actions
+
+[33mcommit 2e507988bc5dcb599c2182edd1e5ba5a8e636c5d[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Tue Apr 13 10:46:08 2021 -0500
+
+    data is now persisted
+
+[33mcommit c92cf3d01ddcb78cecece8099c4098b2a24aaa59[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Mon Apr 12 18:35:14 2021 -0500
+
+    added post fetch
+
+[33mcommit 892241829df3f7c97c279ded4b6e85329f47270e[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Mon Apr 12 12:21:47 2021 -0500
+
+    destination information displaying
+
+[33mcommit bf5919e317bc51c7fa5bb5eaf290931456e41513[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Sun Apr 11 22:57:26 2021 -0500
+
+    changed routesin app.js
+
+[33mcommit b4369eb233d8ab917cc1bf0447f8503e7e1ec5b6[m
+Author: jessie <jssdnvn@gmail.com>
+Date:   Sun Apr 11 22:11:14 2021 -0500
+
+    reinitialized files
