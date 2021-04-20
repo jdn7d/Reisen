@@ -3676,3 +3676,31 @@ Processing by DestinationsController#index as */*
 Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 582)
 
 
+Started GET "/destinations" for ::1 at 2021-04-20 13:21:53 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 3096)
+
+
+Started POST "/destinations" for ::1 at 2021-04-20 13:22:03 -0500
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"St. Louis", "country"=>"USA", "date"=>"now", "activities"=>"arch", "destination"=>{"city"=>"St. Louis", "country"=>"USA", "date"=>"now", "activities"=>"arch"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mDestination Create (3.0ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "date", "activities", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "St. Louis"], ["country", "USA"], ["date", "now"], ["activities", "arch"], ["created_at", "2021-04-20 18:22:03.953751"], ["updated_at", "2021-04-20 18:22:03.953751"]]
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:15:in `create'
+Completed 200 OK in 41ms (Views: 0.6ms | ActiveRecord: 10.3ms | Allocations: 7720)
+
+
+Started GET "/destinations" for ::1 at 2021-04-20 13:22:05 -0500
+Processing by DestinationsController#index as */*
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.7ms | Allocations: 759)
+
+
