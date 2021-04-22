@@ -33,7 +33,6 @@ export function removeDestinationAction(destination) {
   return(dispatch) => {
     dispatch({type: "REMOVE_DESTINATION", payload: destination})
     fetch('http://localhost:3000/destinations/' + destination.id, {
-      
       method: 'DELETE',
       headers: {
         "Content-Type": "application/json",

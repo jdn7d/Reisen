@@ -11,7 +11,6 @@ class DestinationsList extends React.Component {
         })
     }
 
-
     render() {
         return (
             <div className="list-container">
@@ -24,8 +23,6 @@ class DestinationsList extends React.Component {
         this.props.removeDestination(destination)
     }
 }
-
-
 
 const mapDispatchToProps = dispatch => {
     return {
