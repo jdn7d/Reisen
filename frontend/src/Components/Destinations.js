@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {fetchDestinationsAction} from '../redux/action'
 
 class Destinations extends React.Component {
-
+    
 
     componentDidMount() {
        this.props.fetchDestinations()

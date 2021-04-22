@@ -12,18 +12,16 @@ export default class Destination extends React.Component {
       console.log(this.state.likes)
         console.log(this.state.increment)
         this.setState({likes: this.state.likes + this.state.increment})
-       
     }
 
     handleChange = event => {
       this.setState({[event.target.title]: event.target.value})
     }
- 
     
     render() {
         return (
           <div className="destination">
-            <input type="text"
+            <input type="number"
             title="increment"
             onChange={this.handleChange}
             value={this.state.increment}
